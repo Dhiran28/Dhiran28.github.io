@@ -17,7 +17,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'About', href: '#about' },
   { label: 'Expertise', href: '#what-i-build' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Vision', href: '#vision' },
+  { label: 'Vision', href: '#/vision' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -276,65 +276,7 @@ export const PROJECTS: Project[] = [
     role: 'Programmer & Builder',
     year: '2017',
     challenge: 'Building a robot that can autonomously push an opponent out of a ring while staying inside itself.',
-    solution: 'Used IR sensors for edge detection (to stop falling) and ultrasonic sensors to track the opponent. Implemented aggressive attack algorithms for the sumo match.',
-    outcome: 'First Runner-Up at the KOLTE competition. Proved the effectiveness of the custom tracking algorithms.'
-  },
-
-  // --- XR / 3D PROJECTS ---
-  {
-    id: 'kioch-tour',
-    title: 'KIOCH Web Virtual Tour',
-    category: 'WebXR',
-    filter: 'XR',
-    description: 'Browser-based virtual tour embedded in the Kathmandu Institute of Child Health website to support fundraising and showcase facilities.',
-    tags: ['WebXR', 'Three.js', 'Web Dev', 'Healthcare'],
-    imageUrl: 'https://picsum.photos/seed/kioch/800/600',
-    link: 'https://dhiran28.com',
-    role: 'WebXR Developer',
-    year: '2021',
-    client: 'Kathmandu Institute of Child Health',
-    challenge: 'Donors needed to see the facility\'s impact, but physical visits were limited.',
-    solution: 'Created an interactive 360-degree virtual tour accessible via any web browser. Integrated hotspots with information about the equipment and child care facilities.',
-    outcome: 'Enhanced the fundraising campaign by providing transparency and an emotional connection to the institute\'s work.'
-  },
-  {
-    id: '3d-works',
-    title: '3D Art & Animation',
-    category: '3D Design',
-    filter: 'XR',
-    description: 'A collection of 3D models, textures, and animations created in Blender. Includes intricate texturing and rigging for virtual environments.',
-    tags: ['Blender', '3D Modeling', 'Animation', 'Texturing'],
-    imageUrl: 'https://picsum.photos/seed/3dart/800/600',
-    link: 'https://sketchfab.com',
-    role: '3D Artist',
-    year: 'Ongoing',
-    challenge: 'Creating optimized assets that look high-quality but perform well in real-time engines like Unity and WebXR.',
-    solution: 'Focused on efficient topology, baking high-poly details into low-poly meshes, and using PBR texturing workflows in Blender.',
-    outcome: 'A versatile portfolio of assets used across various VR and AR projects, demonstrating a bridge between technical code and artistic vision.'
-  },
-
-  // =================================================================
-  // ADD NEW PROJECT BELOW
-  // Copy and paste this block, then uncomment and fill in details
-  // =================================================================
-  /*
-  {
-    id: 'unique-project-id',
-    title: 'Project Title',
-    category: 'Category Name',
-    filter: 'VR', // Options: 'VR' | 'AR' | 'XR' | 'IoT' | 'AI'
-    description: 'Short description for the card view.',
-    tags: ['Tech1', 'Tech2'],
-    imageUrl: 'https://picsum.photos/seed/newid/800/600',
-    
-    // Details for popup
-    role: 'Your Role',
-    year: '2024',
-    client: 'Client or Personal',
-    challenge: 'What was the problem?',
-    solution: 'How did you solve it?',
-    outcome: 'What was the result?',
-    link: 'https://optional-link.com'
-  },
-  */
+    solution: 'Used IR sensors for edge detection (to stop falling) and ultrasonic sensors to track the opponent. Implemented aggressive maneuvering algorithms.',
+    outcome: 'High agility and robust construction allowed the bot to outmaneuver heavier opponents, securing 2nd place nationally.'
+  }
 ];

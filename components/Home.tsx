@@ -4,7 +4,6 @@ import Hero from './Hero';
 import About from './About';
 import Services from './Services';
 import Projects from './Projects';
-import Vision from './Vision';
 import Contact from './Contact';
 
 const Home: React.FC = () => {
@@ -15,7 +14,6 @@ const Home: React.FC = () => {
       <About />
       <Services />
       <Projects />
-      <Vision />
       <Contact />
     </div>
   );

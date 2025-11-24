@@ -3,6 +3,16 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
+
+  const handleScrollTo = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    window.history.pushState(null, '', `#${id}`);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Elements */}
@@ -52,13 +62,15 @@ const Hero: React.FC = () => {
         >
           <a 
             href="#projects"
-            className="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-all transform hover:scale-105"
+            onClick={(e) => handleScrollTo(e, 'projects')}
+            className="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-all transform hover:scale-105 cursor-pointer"
           >
             View Work
           </a>
           <a 
             href="#contact"
-            className="px-8 py-4 bg-transparent border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all"
+            onClick={(e) => handleScrollTo(e, 'contact')}
+            className="px-8 py-4 bg-transparent border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all cursor-pointer"
           >
             Contact Me
           </a>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useData } from '../context/DataContext';
 import { Project, ProjectFilter } from '../types';
 import { Plus, Edit2, Trash2, X, Save, ArrowLeft, Image as ImageIcon, Lock, LogOut } from 'lucide-react';
@@ -127,9 +126,9 @@ const Dashboard: React.FC = () => {
               Login
             </button>
           </form>
-          <Link to="/" className="block mt-8 text-zinc-500 hover:text-white text-sm transition-colors">
+          <a href="#/" className="block mt-8 text-zinc-500 hover:text-white text-sm transition-colors">
             ← Return to Portfolio
-          </Link>
+          </a>
         </div>
       </div>
     );
@@ -143,9 +142,9 @@ const Dashboard: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
           <div className="flex items-center gap-4">
-            <Link to="/" className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
+            <a href="#/" className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
               <ArrowLeft size={20} />
-            </Link>
+            </a>
             <div>
               <h1 className="text-3xl font-display font-bold">Project Dashboard</h1>
               <p className="text-zinc-500 text-sm">Manage your portfolio content</p>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { SOCIAL_LINKS } from '../constants';
 
 const Contact: React.FC = () => {
@@ -46,7 +45,7 @@ const Contact: React.FC = () => {
           <p>&copy; {new Date().getFullYear()} Dhiran Karki. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6 items-center">
             <p>Designed & Built with React + Tailwind</p>
-            <Link to="/dashboard" className="hover:text-zinc-400 transition-colors">Admin Login</Link>
+            <a href="#/dashboard" className="hover:text-zinc-400 transition-colors">Admin Login</a>
           </div>
         </div>
       </div>
