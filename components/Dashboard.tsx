@@ -26,13 +26,19 @@ const Dashboard: React.FC = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // PASSWORD CONFIGURATION
-    if (passwordInput === 'admin2024') {
-      setIsAuthenticated(true);
-      sessionStorage.setItem('xr_dashboard_auth', 'true');
-      setAuthError('');
-    } else {
-      setAuthError('Incorrect password. Try "admin2024"');
+    // PASSWORD CONFIGURATION (Obfuscated)
+    // We compare Base64 string to hide the plain text password in the codebase.
+    // 'YWRtaW4yMDI0' decodes to 'admin2024'
+    try {
+      if (btoa(passwordInput) === 'YWRtaW4yMDI0') {
+        setIsAuthenticated(true);
+        sessionStorage.setItem('xr_dashboard_auth', 'true');
+        setAuthError('');
+      } else {
+        setAuthError('Incorrect password.');
+      }
+    } catch (err) {
+      setAuthError('Invalid character input.');
     }
   };
 
