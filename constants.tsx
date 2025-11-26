@@ -201,7 +201,7 @@ export const PROJECTS: Project[] = [
     filter: 'IoT',
     description: 'Automated diya lighting and curtain opening system controlled via mobile app. Successfully used by PM KP Sharma Oli during an inauguration event.',
     tags: ['Arduino Nano', 'Bluetooth HC-05', 'Android', 'Automation'],
-    imageUrl: '/Images/KIOCH.png',
+    imageUrl: '/Images/Inagurationsystem.jpg',
     role: 'Hardware Developer',
     year: '2019',
     client: 'Event Organizers',
