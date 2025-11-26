@@ -1,3 +1,4 @@
+
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { Project } from '../types';
 import { PROJECTS as INITIAL_PROJECTS } from '../constants';
@@ -15,7 +16,8 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [projects, setProjects] = useState<Project[]>(() => {
     // Try to load from local storage first
     try {
-      const saved = localStorage.getItem('xr_portfolio_projects');
+      // Updated key to 'xr_portfolio_v8' to force fresh load of images/data
+      const saved = localStorage.getItem('xr_portfolio_v8');
       return saved ? JSON.parse(saved) : INITIAL_PROJECTS;
     } catch (e) {
       return INITIAL_PROJECTS;
@@ -24,7 +26,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Save to local storage whenever projects change
   useEffect(() => {
-    localStorage.setItem('xr_portfolio_projects', JSON.stringify(projects));
+    localStorage.setItem('xr_portfolio_v8', JSON.stringify(projects));
   }, [projects]);
 
   const addProject = (project: Project) => {
