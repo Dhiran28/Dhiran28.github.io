@@ -16,10 +16,19 @@ const About: React.FC = () => {
           >
              {/* Abstract decoration or User Photo */}
              <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-tr from-zinc-800 to-zinc-700 relative group border border-white/5">
+                {/* 
+                   NOTE: If your file is in "public/Images/Profile_image.png", 
+                   the path here must be "/Images/Profile_image.png".
+                   Ensure the casing (Images vs images) matches your folder exactly.
+                */}
                 <img 
-                  src="https://picsum.photos/seed/dhiran/800/800" 
+                  src="/Images/Profile_image.png" 
                   alt="Dhiran Karki" 
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 filter grayscale group-hover:grayscale-0"
+                  onError={(e) => {
+                    // Fallback to placeholder if local image is not found
+                    e.currentTarget.src = "https://picsum.photos/seed/dhiran/800/800";
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-xr-dark via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6">

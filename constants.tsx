@@ -75,6 +75,23 @@ export const SERVICES: Service[] = [
   }
 ];
 
+// ==========================================
+// IMAGE UPLOAD GUIDE
+// ==========================================
+// 1. Project Images: 
+//    - Recommended Size: 1280 x 720 pixels (720p)
+//    - Aspect Ratio: 16:9
+//    - Format: JPG or WEBP (smaller file size)
+//
+// 2. Profile Picture (in About section):
+//    - Recommended Size: 800 x 800 pixels
+//    - Aspect Ratio: 1:1 (Square)
+//
+// 3. How to use local images:
+//    - Place images in: public/images/your-file.jpg
+//    - Set imageUrl: '/images/your-file.jpg'
+// ==========================================
+
 export const PROJECTS: Project[] = [
   // --- VR PROJECTS ---
   {
@@ -84,7 +101,7 @@ export const PROJECTS: Project[] = [
     filter: 'VR',
     description: 'A VR simulation training tool featuring custom-built haptic gloves using flex sensors. Utilizes TensorFlow Lite on Oculus Go for real-time gesture recognition.',
     tags: ['Unity', 'TensorFlow Lite', 'Haptics', 'Oculus Go'],
-    imageUrl: 'https://picsum.photos/seed/firstresp/800/600',
+    imageUrl: 'https://picsum.photos/seed/firstresp/1280/720', 
     featured: true,
     role: 'Lead Developer & Hardware Engineer',
     year: '2019',
@@ -100,7 +117,7 @@ export const PROJECTS: Project[] = [
     filter: 'VR',
     description: 'Immersive VR headset-based experience for the Prime Minister to preview future office space. Optimized lighting and teleportation for realistic decision-making.',
     tags: ['Unity', 'VR', 'ArchViz', 'Teleportation'],
-    imageUrl: 'https://picsum.photos/seed/pmoffice/800/600',
+    imageUrl: 'https://picsum.photos/seed/pmoffice/1280/720', 
     featured: true,
     role: 'VR Developer & Project Manager',
     year: '2020',
@@ -118,7 +135,7 @@ export const PROJECTS: Project[] = [
     filter: 'AR',
     description: 'Created engaging filters for TikTok/Instagram with over 52M+ views. Recognized as a top 120 Meta Creator. Includes a YouTube channel teaching AR development.',
     tags: ['Spark AR', 'Content Creation', 'Education'],
-    imageUrl: 'https://picsum.photos/seed/filters/800/600',
+    imageUrl: 'https://picsum.photos/seed/filters/1280/720',
     featured: true,
     link: 'https://youtube.com/@apar.meta',
     role: 'AR Creator & Educator',
@@ -135,7 +152,7 @@ export const PROJECTS: Project[] = [
     filter: 'AR',
     description: 'Unity3D-based AR application allowing users to place and interact with realistic car models in their environment. Features dynamic browsing and scaling.',
     tags: ['Unity3D', 'AR Core', 'Mobile AR'],
-    imageUrl: 'https://picsum.photos/seed/arcar/800/600',
+    imageUrl: 'https://picsum.photos/seed/arcar/1280/720',
     link: 'https://youtu.be/-LndoOTxegU',
     role: 'AR Developer',
     year: '2021',
@@ -150,7 +167,7 @@ export const PROJECTS: Project[] = [
     filter: 'AR',
     description: 'Educational game for kids where correct answers unlock real-world 3D objects in AR. Blends learning with interactive play.',
     tags: ['AR', 'Education', 'Gamification'],
-    imageUrl: 'https://picsum.photos/seed/arguess/800/600',
+    imageUrl: 'https://picsum.photos/seed/arguess/1280/720',
     link: 'https://youtube.com/shorts/gvMlIgsHm8Y',
     role: 'Game Developer',
     year: '2021',
@@ -167,7 +184,7 @@ export const PROJECTS: Project[] = [
     filter: 'IoT',
     description: 'Elephant monitoring system using Raspberry Pi and ESP32 accelerometers. Provides real-time notifications to local communities to prevent human-wildlife conflict.',
     tags: ['IoT', 'Embedded C++', 'Raspberry Pi', 'Social Impact'],
-    imageUrl: 'https://picsum.photos/seed/bigfoot/800/600',
+    imageUrl: 'https://picsum.photos/seed/bigfoot/1280/720',
     featured: true,
     role: 'Embedded Systems Engineer',
     year: '2019',
@@ -183,7 +200,7 @@ export const PROJECTS: Project[] = [
     filter: 'IoT',
     description: 'Automated diya lighting and curtain opening system controlled via mobile app. Successfully used by PM KP Sharma Oli during an inauguration event.',
     tags: ['Arduino Nano', 'Bluetooth HC-05', 'Android', 'Automation'],
-    imageUrl: 'https://picsum.photos/seed/automation/800/600',
+    imageUrl: 'https://picsum.photos/seed/automation/1280/720',
     role: 'Hardware Developer',
     year: '2019',
     client: 'Event Organizers',
@@ -198,7 +215,7 @@ export const PROJECTS: Project[] = [
     filter: 'IoT',
     description: 'Award-winning medicine reminder system for the elderly using Arduino Uno and RTC. Features alarm schedules and voice info buttons.',
     tags: ['Arduino', 'Hardware Design', 'Healthcare', 'Prototyping'],
-    imageUrl: 'https://picsum.photos/seed/mediminder/800/600',
+    imageUrl: 'https://picsum.photos/seed/mediminder/1280/720',
     role: 'Inventor',
     year: 'High School Project',
     challenge: 'Elderly patients often forget medication schedules or mix up prescriptions.',
@@ -212,7 +229,7 @@ export const PROJECTS: Project[] = [
     filter: 'IoT',
     description: 'GSM-based two-way communication system between farms and city offices. Updates fruit readiness and supply stock in real-time via NodeMCU.',
     tags: ['NodeMCU', 'GSM', 'Agriculture', 'IoT'],
-    imageUrl: 'https://picsum.photos/seed/syauji/800/600',
+    imageUrl: 'https://picsum.photos/seed/syauji/1280/720',
     role: 'System Integrator',
     year: '2018',
     challenge: 'Bridging the communication gap between remote fruit farms and city-based distribution offices without relying on unstable internet connections.',
@@ -228,7 +245,7 @@ export const PROJECTS: Project[] = [
     filter: 'AI',
     description: 'Dual-robot system simulating Mars exploration. Uses OpenCV on Raspberry Pi for autonomous obstacle avoidance and sample collection.',
     tags: ['OpenCV', 'Python', 'Raspberry Pi', 'Robotics'],
-    imageUrl: 'https://picsum.photos/seed/marsrobot/800/600',
+    imageUrl: 'https://picsum.photos/seed/marsrobot/1280/720',
     role: 'Robotics Engineer',
     year: '2018',
     client: 'National Robotics Competition',
@@ -243,7 +260,7 @@ export const PROJECTS: Project[] = [
     filter: 'AI',
     description: 'Portable Computer-Aided Diagnostic system using Raspberry Pi Zero and CNNs to classify eye images as "Normal" or "Cataract" outside clinical settings.',
     tags: ['Python', 'TensorFlow', 'Edge AI', 'Healthcare'],
-    imageUrl: 'https://picsum.photos/seed/cataract/800/600',
+    imageUrl: 'https://picsum.photos/seed/cataract/1280/720',
     role: 'ML Developer',
     year: '2020',
     challenge: 'Providing accessible eye-care diagnostics in rural areas where ophthalmologists are scarce.',
@@ -257,7 +274,7 @@ export const PROJECTS: Project[] = [
     filter: 'AI',
     description: 'Award-winning autonomous robot capable of crossing suspension bridges and tracking colorful lines. Winner of "Best Engineering Award" at Robocon Nepal.',
     tags: ['Robotics', 'Arduino', 'Mechanical Design', 'Competition'],
-    imageUrl: 'https://picsum.photos/seed/robotics/800/600',
+    imageUrl: 'https://picsum.photos/seed/robotics/1280/720',
     role: 'Lead Engineer',
     year: '2017',
     client: 'Robocon Nepal',
@@ -272,7 +289,7 @@ export const PROJECTS: Project[] = [
     filter: 'AI',
     description: 'Autonomous sumo robot using IR sensors for opponent tracking and edge detection. Secured First Runner-Up at KOLTE national competition.',
     tags: ['Arduino', 'Sensors', 'Autonomous', 'Competition'],
-    imageUrl: 'https://picsum.photos/seed/sumobot/800/600',
+    imageUrl: 'https://picsum.photos/seed/sumobot/1280/720',
     role: 'Programmer & Builder',
     year: '2017',
     challenge: 'Building a robot that can autonomously push an opponent out of a ring while staying inside itself.',
