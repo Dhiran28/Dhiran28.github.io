@@ -51,14 +51,15 @@ const About: React.FC = () => {
             
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed">
               <p>
-                My journey began with a <strong className="text-white">Bachelor’s in Computer Engineering</strong>, laying a robust technical foundation in embedded systems and programming. This curiosity quickly evolved into a passion for immersive technologies.
+               My journey began with a curiosity for how stories move beyond screens into space. That curiosity grew into a passion for <strong className="text-white">immersive media storytelling</strong>, where narrative, interaction, and environment merge.
               </p>
+
               <p>
-                Beyond building, I have a passion for <strong className="text-white">mentorship</strong>. I have supervised final-year engineering students on cutting-edge projects like gesture-based AR control for video conferencing and voice-assisted AR travel companions.
+               Beyond creating, I care deeply about <strong className="text-white">mentorship</strong>. I’ve guided creators on projects involving gesture-based interaction and voice-driven AR experiences, helping ideas become meaningful digital moments.
               </p>
+
               <p>
-                Currently, I’m advancing my expertise through the <strong className="text-white">Master of Computing (AI)</strong> program at Curtin University, Australia. 
-                I combine my background in IoT, Robotics, and XR to create tools that are not just visually stunning, but functionally transformative.
+               Currently, I’m focused on developing <strong className="text-white">intelligent immersive systems</strong>, blending XR, spatial design, and AI to create experiences that are not just visually engaging, but emotionally and functionally transformative.
               </p>
             </div>
 
