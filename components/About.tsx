@@ -49,7 +49,8 @@ const About: React.FC = () => {
               <span className="text-xr-primary">physical and digital.</span>
             </h2>
             
-            <div className="space-y-6 text-zinc-400 text-lg leading-relaxed">
+            <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-justify hyphen-auto">
+
               <p>
                My journey began with a curiosity for how stories move beyond screens into space. That curiosity grew into a passion for <strong className="text-white">immersive media storytelling</strong>, where narrative, interaction, and environment merge.
               </p>
