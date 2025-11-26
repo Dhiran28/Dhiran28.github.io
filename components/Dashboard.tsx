@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import { useData } from '../context/DataContext';
 import { Project, ProjectFilter } from '../types';
-import { Plus, Edit2, Trash2, X, Save, ArrowLeft, Image as ImageIcon, Lock, LogOut } from 'lucide-react';
+import { Plus, Edit2, Trash2, X, Save, ArrowLeft, Image as ImageIcon, Lock, LogOut, Copy } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
   const { projects, addProject, updateProject, deleteProject } = useData();
@@ -26,7 +27,6 @@ const Dashboard: React.FC = () => {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     // PASSWORD CONFIGURATION
-    // You can change 'admin2024' to your preferred password here
     if (passwordInput === 'admin2024') {
       setIsAuthenticated(true);
       sessionStorage.setItem('xr_dashboard_auth', 'true');
@@ -40,6 +40,13 @@ const Dashboard: React.FC = () => {
     setIsAuthenticated(false);
     sessionStorage.removeItem('xr_dashboard_auth');
     setPasswordInput('');
+  };
+
+  const handleCopyForGithub = () => {
+    const dataString = `export const PROJECTS: Project[] = ${JSON.stringify(projects, null, 2)};`;
+    navigator.clipboard.writeText(dataString).then(() => {
+      alert("Data copied to clipboard! \n\n1. Open 'constants.tsx'\n2. Replace the 'PROJECTS' array with this content.\n3. Push to GitHub.");
+    });
   };
 
   const initialProjectState: Project = {
@@ -151,6 +158,13 @@ const Dashboard: React.FC = () => {
             </div>
           </div>
           <div className="flex gap-4 w-full md:w-auto">
+            <button
+              onClick={handleCopyForGithub}
+              className="px-4 py-2 border border-white/10 rounded-lg text-zinc-400 hover:text-white hover:bg-white/5 transition-colors flex items-center gap-2"
+              title="Copy code to clipboard for constants.tsx"
+            >
+              <Copy size={16} /> Copy Data
+            </button>
             <button
               onClick={handleLogout}
               className="px-4 py-2 border border-white/10 rounded-lg text-zinc-400 hover:text-white hover:bg-white/5 transition-colors flex items-center gap-2"
