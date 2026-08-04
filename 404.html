@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhiran Karki | XR / AR / VR Developer</title>
+    <script type="text/javascript">
+      // Single Page Application (SPA) redirect for GitHub Pages
+      (function() {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+
+        var pathSegments = path.split('/').filter(Boolean);
+        var lastSegment = pathSegments[pathSegments.length - 1];
+
+        if (lastSegment === 'dashboard' || lastSegment === 'vision') {
+          var basePath = path.substring(0, path.lastIndexOf('/' + lastSegment));
+          var newUrl = window.location.protocol + '//' + window.location.host + basePath + '/#/' + lastSegment + search + hash;
+          window.location.replace(newUrl);
+        } else if (pathSegments.length > 0 && !hash) {
+          var repoPath = pathSegments.length > 1 ? '/' + pathSegments.slice(0, -1).join('/') : '';
+          var route = pathSegments[pathSegments.length - 1];
+          window.location.replace(window.location.protocol + '//' + window.location.host + repoPath + '/#/' + route + search + hash);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
