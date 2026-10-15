@@ -52,13 +52,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   }
 ];
 
-export const MEMBERSHIPS = [
-  {
-    name: 'Australian Pattern Recognition Society (APRS)',
-    role: 'Upcoming Presenter',
-    focus: 'Pattern recognition, computer vision & machine learning',
-    url: 'https://www.aprs.org.au/',
-  },
+export const MEMBERSHIPS: { name: string; role: string; focus: string; url?: string }[] = [
   {
     name: 'Immerse Australia',
     role: 'Student Affiliate',
