@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, Globe, Trophy, GraduationCap } from 'lucide-react';
+import { Rocket, Globe, Trophy, GraduationCap, Award, ExternalLink } from 'lucide-react';
+import { MEMBERSHIPS } from '../constants';
 
 const About: React.FC = () => {
   return (
@@ -97,6 +98,33 @@ const About: React.FC = () => {
                       <span className="text-xs text-zinc-400 font-medium">Curtin University, AU</span>
                     </div>
                 </div>
+            </div>
+            {/* MEMBERSHIPS & AFFILIATIONS */}
+            <div className="mt-8">
+              <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-zinc-400 mb-3">
+                <Award size={16} className="text-xr-accent" />
+                Memberships &amp; Affiliations
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {MEMBERSHIPS.map((m) => {
+                  const inner = (
+                    <>
+                      <div className="flex items-start justify-between gap-2">
+                        <span className="text-sm font-bold text-white leading-snug">{m.name}</span>
+                        {m.url && <ExternalLink size={14} className="text-zinc-500 group-hover:text-xr-accent flex-shrink-0 mt-0.5" />}
+                      </div>
+                      <span className="block text-xs text-xr-accent font-medium mt-1">{m.role}</span>
+                      <span className="block text-xs text-zinc-400 mt-0.5">{m.focus}</span>
+                    </>
+                  );
+                  const cls = "group block p-3.5 rounded-xl bg-zinc-900/80 border border-white/10 hover:border-white/20 transition-all";
+                  return m.url ? (
+                    <a key={m.name} href={m.url} target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a>
+                  ) : (
+                    <div key={m.name} className={cls}>{inner}</div>
+                  );
+                })}
+              </div>
             </div>
           </motion.div>
         </div>
