@@ -52,6 +52,25 @@ export const SOCIAL_LINKS: SocialLink[] = [
   }
 ];
 
+export const MEMBERSHIPS = [
+  {
+    name: 'Australian Pattern Recognition Society (APRS)',
+    role: 'Member',
+    focus: 'Pattern recognition, computer vision & machine learning',
+    url: 'https://www.aprs.org.au/',
+  },
+  {
+    name: 'Immerse Australia',
+    role: 'Student Affiliate',
+    focus: 'Immersive technologies (XR / AR / VR)',
+  },
+  {
+    name: 'ComSSA (Curtin)',
+    role: 'Member',
+    focus: 'Computing students association',
+  },
+];
+
 export const SPECIALIZATIONS = [
   'Artificial Intelligence & Machine Learning',
   'Computer Vision',
