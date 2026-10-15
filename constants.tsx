@@ -55,7 +55,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const MEMBERSHIPS = [
   {
     name: 'Australian Pattern Recognition Society (APRS)',
-    role: 'Member',
+    role: 'Upcoming Presenter',
     focus: 'Pattern recognition, computer vision & machine learning',
     url: 'https://www.aprs.org.au/',
   },
