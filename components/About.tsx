@@ -99,11 +99,11 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </div>
-            {/* MEMBERSHIPS & AFFILIATIONS */}
+            {/* AFFILIATIONS & ENGAGEMENTS */}
             <div className="mt-8">
               <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-zinc-400 mb-3">
                 <Award size={16} className="text-xr-accent" />
-                Memberships &amp; Affiliations
+                Affiliations &amp; Engagements
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {MEMBERSHIPS.map((m) => {
